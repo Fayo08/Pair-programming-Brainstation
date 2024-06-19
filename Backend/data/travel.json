@@ -1,0 +1,151 @@
+{
+  "countries": [
+    {
+      "image": "/files/Jamaica.jpg",
+      "id": "afdd7ad5-ef25-414e-bf6d-4b492e615c83",
+      "country": "Jamaica",
+      "weather": {
+        "summer": "hot and humid",
+        "winter": "mild and dry"
+      },
+      "best_time_to_travel": "mid-December to mid-April",
+      "appropriate_clothing": {
+        "summer": "lightweight, breathable clothing, sun hat, sunglasses, and sunscreen",
+        "winter": "light jacket, jeans, and closed-toe shoes"
+      },
+      "best_restaurants": [
+        {
+          "name": "Scotchies",
+          "location": "Montego Bay, Ocho Rios, Kingston",
+          "cuisine": "Authentic Jamaican Jerk"
+        },
+        {
+          "name": "The Houseboat Grill",
+          "location": "Montego Bay",
+          "cuisine": "Seafood and International"
+        },
+        {
+          "name": "Miss T's Kitchen",
+          "location": "Ocho Rios",
+          "cuisine": "Caribbean"
+        },
+        {
+          "name": "Margaritaville",
+          "location": "Negril",
+          "cuisine": "American and Caribbean"
+        },
+        {
+          "name": "Devon House Bakery",
+          "location": "Kingston",
+          "cuisine": "Jamaican Patties and Desserts"
+        }
+      ],
+      "must_visit_places": [
+        "Dunn's River Falls",
+        "Seven Mile Beach",
+        "Blue Hole",
+        "Bob Marley Museum",
+        "Blue Mountains",
+        "Rick's Cafe"
+      ]
+    },
+    {
+      "image": "/files/Japan.jpg",
+      "country": "Japan",
+      "id": "372dd703-a0b4-478d-b433-cb64978b8ede",
+      "weather": {
+        "summer": "hot and humid",
+        "winter": "cold and snowy in the north, mild in the south"
+      },
+      "best_time_to_travel": "March to May (spring) and September to November (autumn)",
+      "appropriate_clothing": {
+        "summer": "lightweight, breathable clothing, hat, sunglasses, and sunscreen",
+        "winter": "warm clothing, including a coat, scarf, gloves, and thermal wear"
+      },
+      "best_restaurants": [
+        {
+          "name": "Sukiyabashi Jiro",
+          "location": "Tokyo",
+          "cuisine": "Sushi"
+        },
+        {
+          "name": "Narisawa",
+          "location": "Tokyo",
+          "cuisine": "Innovative Japanese"
+        },
+        {
+          "name": "Kyoto Kitcho Arashiyama",
+          "location": "Kyoto",
+          "cuisine": "Kaiseki (traditional multi-course)"
+        },
+        {
+          "name": "Ichiran",
+          "location": "Fukuoka (and other locations)",
+          "cuisine": "Ramen"
+        },
+        {
+          "name": "Kanidoraku",
+          "location": "Osaka",
+          "cuisine": "Crab cuisine"
+        }
+      ],
+      "must_visit_places": [
+        "Mount Fuji",
+        "Kyoto's Temples",
+        "Tokyo Tower",
+        "Hiroshima Peace Memorial Park",
+        "Osaka Castle",
+        "Fushimi Inari Shrine"
+      ]
+    },
+    {
+      "image": "/files/Greece.jpg",
+      "country": "Greece",
+      "id": "e37583c0-3887-4978-aeb3-23e8a7fb15b0",
+      "weather": {
+        "summer": "hot and dry",
+        "winter": "mild and rainy"
+      },
+      "best_time_to_travel": "April to June and September to October",
+      "appropriate_clothing": {
+        "summer": "lightweight, breathable clothing, sun hat, sunglasses, and sunscreen",
+        "winter": "light jacket, sweaters, and closed-toe shoes"
+      },
+      "best_restaurants": [
+        {
+          "name": "Funky Gourmet",
+          "location": "Athens",
+          "cuisine": "Modern Greek"
+        },
+        {
+          "name": "Varoulko Seaside",
+          "location": "Athens",
+          "cuisine": "Seafood"
+        },
+        {
+          "name": "To Psaraki",
+          "location": "Santorini",
+          "cuisine": "Seafood"
+        },
+        {
+          "name": "Mavrikos",
+          "location": "Rhodes",
+          "cuisine": "Traditional Greek"
+        },
+        {
+          "name": "Spondi",
+          "location": "Athens",
+          "cuisine": "French and Mediterranean"
+        }
+      ],
+      "must_visit_places": [
+        "Acropolis of Athens",
+        "Santorini",
+        "Meteora",
+        "Delphi",
+        "Mykonos",
+        "Rhodes Old Town"
+      ]
+    }
+  ]
+}

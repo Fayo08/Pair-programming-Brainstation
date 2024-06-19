@@ -40,6 +40,11 @@
     display: flex;
     gap: 1rem;
   }
+  &__clothing-subheading {
+    font-size: 1.2rem;
+    color: #898989;
+    padding-bottom: 10px;
+  }
 
   &__clothing-item {
     text-decoration: none;
@@ -48,6 +53,11 @@
   }
 }
 
+.clothing-recommend {
+  display: flex;
+
+  justify-content: space-between;
+}
 .main-section {
   display: flex;
   margin: auto;
@@ -87,4 +97,13 @@
 
 .aside-title {
   padding-bottom: 2rem;
+}
+
+.image {
+  &__main {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }

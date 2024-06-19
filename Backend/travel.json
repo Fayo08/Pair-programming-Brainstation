@@ -1,6 +1,7 @@
 {
   "countries": [
     {
+      "id" :"afdd7ad5-ef25-414e-bf6d-4b492e615c83",
       "country": "Jamaica",
       "weather": {
         "summer": "hot and humid",
@@ -49,6 +50,7 @@
     },
     {
       "country": "Japan",
+      "id" :"372dd703-a0b4-478d-b433-cb64978b8ede",
       "weather": {
         "summer": "hot and humid",
         "winter": "cold and snowy in the north, mild in the south"
@@ -96,6 +98,7 @@
     },
     {
       "country": "Greece",
+      "id" :"e37583c0-3887-4978-aeb3-23e8a7fb15b0",
       "weather": {
         "summer": "hot and dry",
         "winter": "mild and rainy"
