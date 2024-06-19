@@ -1,6 +1,7 @@
 import express from "express";
 import fs from "fs";
 
+
 const router = express.Router();
 
 function readData() {
@@ -29,3 +30,5 @@ function readData() {
       });
     }
   });
+
+  export default router

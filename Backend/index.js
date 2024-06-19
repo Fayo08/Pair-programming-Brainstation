@@ -1,5 +1,6 @@
 import express from "express"
 import cors from "cors"
+import travelRoutes from "./routes/travelRoutes.js"
 
 const app = express();
 

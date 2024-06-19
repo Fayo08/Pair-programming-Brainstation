@@ -1,0 +1,90 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  padding-top: 50px;
+}
+
+.cafe {
+  display: flex;
+  flex-direction: column;
+}
+
+.place {
+  &__container {
+    width: 500px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem;
+  }
+  &__weather {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__weather-best {
+    display: flex;
+    color: #898989;
+    gap: 1rem;
+  }
+  &__weather-now {
+    display: flex;
+    gap: 1rem;
+  }
+  &__weather-info {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__clothing-item {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 5px 0;
+  }
+}
+
+.main-section {
+  display: flex;
+  margin: auto;
+  width: 800px;
+  gap: 2rem;
+}
+
+.recommended-container {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cafe {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__container {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.others-card {
+  display: flex;
+  gap: 2rem;
+  &__image {
+    height: 100px;
+    object-fit: cover;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.aside-title {
+  padding-bottom: 2rem;
+}
