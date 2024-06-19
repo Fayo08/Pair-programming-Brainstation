@@ -16,7 +16,9 @@ const Card = () => {
       </div>
 
       <div className="card__body">
-        <p className="card__text">Resturant Review</p>
+        <p>cuisine</p>
+        <p className="card__text">name</p>
+        <p className="card__text">location</p>
       </div>
     </div>
   );
