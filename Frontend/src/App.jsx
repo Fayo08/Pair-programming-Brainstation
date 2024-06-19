@@ -3,13 +3,44 @@ import Card from "../src/components/Card/Card.jsx";
 import Sun from "../src/assets/icons/sun.svg";
 import place1 from "../src/assets/places/greece.jpg";
 import data from "../../travel.json";
+import axios from "axios";
 import "./App.scss";
 
-function App() {
-  const [places, setPlaces] = useState(data.countries);
-  const [currentPlace, setCurrentPlace] = useState(places[0]);
+import Japan from "./assets/places/japan.jpg";
+import Jamaica from "./assets/places/jamicia.jpg";
+import Greece from "./assets/places/greece.jpg";
 
+function App() {
+  const [places, setPlaces] = useState([]);
+  const [currentPlace, setCurrentPlace] = useState(data.countries[0]);
+  const [placeIndex, setPlaceIndex] = useState(0);
+  console.log(currentPlace);
   const API_URL = import.meta.env.VITE_API_URL;
+  const host = "http://localhost:8080";
+
+  const fetchPlaces = async () => {
+    try {
+      const response = await axios.get(`${host}/travel`);
+      setPlaces(response.data.countries);
+      setCurrentPlace(response.data.countries[0]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPlaces();
+  }, []);
+
+  function updateIndex(index) {
+    console.log(index);
+    setPlaceIndex(index);
+    updateCurrentPlace();
+  }
+
+  function updateCurrentPlace() {
+    setCurrentPlace(places[placeIndex]);
+  }
   return (
     <main className="body">
       <section className="main-section">
@@ -18,7 +49,7 @@ function App() {
           <div className="image_input">
             <div className="image__preview">
               <input type="file" placeholder="Search for a place" />
-              <img className="image__main" src={place1} alt="place" />
+              <img className="image__main" src={Jamaica} alt="place" />
               <p>{currentPlace.country}</p>
             </div>
           </div>
@@ -84,22 +115,32 @@ function App() {
         <aside className="aside">
           <h3 className="aside-title">Other places</h3>
           <div className="others__container">
-            <div className="others-card">
+            <div className="others-card" onClick={() => updateIndex(0)}>
               <div className="others-card__image-container">
-                <img className="others-card__image" src={place1} alt="place" />
+                <img className="others-card__image" src={Jamaica} alt="place" />
               </div>
               <div className="others-card__body">
-                <p>Place</p>
-                <p>text about item</p>
+                <p>Jamaica</p>
+                <p>This is Jamaica</p>
               </div>
             </div>
-            <div className="others-card">
+
+            <div className="others-card" onClick={() => updateIndex(1)}>
               <div className="others-card__image-container">
-                <img className="others-card__image" src={place1} alt="place" />
+                <img className="others-card__image" src={Japan} alt="place" />
               </div>
               <div className="others-card__body">
-                <p>Place</p>
-                <p>text about item</p>
+                <p>Japan</p>
+                <p>This is Japan</p>
+              </div>
+            </div>
+            <div className="others-card" onClick={() => updateIndex(2)}>
+              <div className="others-card__image-container">
+                <img className="others-card__image" src={Greece} alt="place" />
+              </div>
+              <div className="others-card__body">
+                <p>Greece</p>
+                <p>This is Greece</p>
               </div>
             </div>
           </div>
