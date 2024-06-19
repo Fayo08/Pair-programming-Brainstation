@@ -65,14 +65,18 @@ function App() {
             <div className="cafe">
               <h3>Things to do</h3>
               <div className="cafe__container">
-                {currentPlace.best_restaurants.map((item, index) => (
-                  <Card
-                    key={index}
-                    image={item.image}
-                    cuisine={item.cuisine}
-                    name={item.name}
-                  />
-                ))}
+                {currentPlace.best_restaurants
+                  .sort(() => 0.5 - Math.random())
+                  .slice(0, 3)
+                  .map((item, index) => (
+                    <Card
+                      key={index}
+                      image={item.image}
+                      cuisine={item.cuisine}
+                      name={item.name}
+                      location={item.location}
+                    />
+                  ))}
               </div>
             </div>
           </div>

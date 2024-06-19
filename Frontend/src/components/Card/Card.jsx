@@ -2,7 +2,7 @@ import "./Card.scss";
 import Star from "../../assets/icons/star.svg";
 import cafe2 from "../../assets/cafe/cafe1.jpg";
 
-const Card = () => {
+const Card = ({ image, cuisine, name, location }) => {
   return (
     <div className="card">
       <div className="card__image-container">
@@ -16,9 +16,9 @@ const Card = () => {
       </div>
 
       <div className="card__body">
-        <p>cuisine</p>
-        <p className="card__text">name</p>
-        <p className="card__text">location</p>
+        <p>{cuisine}</p>
+        <p className="card__text">{name}</p>
+        <p className="card__text">{location}</p>
       </div>
     </div>
   );
