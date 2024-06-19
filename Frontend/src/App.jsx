@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../src/components/Card/Card.jsx";
 import Sun from "../src/assets/icons/sun.svg";
 import place1 from "../src/assets/places/greece.jpg";
-
+import data from "../../travel.json";
 import "./App.scss";
 
 function App() {
+  const [places, setPlaces] = useState(data.countries);
+  const [currentPlace, setCurrentPlace] = useState(places[0]);
+
+  const API_URL = import.meta.env.VITE_API_URL;
   return (
     <main className="body">
       <section className="main-section">
@@ -14,10 +18,9 @@ function App() {
           <div className="image_input">
             <div className="image__preview">
               <input type="file" placeholder="Search for a place" />
-              {/* <img src={}/> */}
-              <p>wher image is</p>
+              <img className="image__main" src={place1} alt="place" />
+              <p>{currentPlace.country}</p>
             </div>
-            <p>Location</p>
           </div>
           <div className="recommended-container">
             <div className="place__weather">
@@ -26,27 +29,50 @@ function App() {
                 <div className="place__weather-info">
                   <p>Current:</p>
                   <img src={Sun} alt="sun" />
-                  <p>Sunny</p>
+                  <p>{currentPlace.weather.summer}</p>
                 </div>
               </div>
               <div className="place__weather-best">
                 <p>Best time to travel </p>
-                <p>April</p>
+                <p>{currentPlace.best_time_to_travel}</p>
               </div>
             </div>
             <div className="place__clothing">
               <h3>What to wear</h3>
-              <ul className="place__clothing-list">
-                <li className="place__clothing-item">dress</li>
-                <li className="place__clothing-item">sunglasses</li>
-              </ul>
+              <div className="clothing-recommend">
+                <div className="summer">
+                  <p className="place__clothing-subheading">Summer</p>
+                  <ul className="place__clothing-list">
+                    {currentPlace.appropriate_clothing.summer
+                      .split(",")
+                      .map((item, index) => (
+                        <li className="place__clothing-item">{item}</li>
+                      ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="place__clothing-subheading">Winter</p>
+                  <ul className="place__clothing-list">
+                    {currentPlace.appropriate_clothing.winter
+                      .split(",")
+                      .map((item, index) => (
+                        <li className="place__clothing-item">{item}</li>
+                      ))}
+                  </ul>
+                </div>
+              </div>
             </div>
             <div className="cafe">
               <h3>Things to do</h3>
               <div className="cafe__container">
-                <Card />
-                <Card />
-                <Card />
+                {currentPlace.best_restaurants.map((item, index) => (
+                  <Card
+                    key={index}
+                    image={item.image}
+                    cuisine={item.cuisine}
+                    name={item.name}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -54,6 +80,15 @@ function App() {
         <aside className="aside">
           <h3 className="aside-title">Other places</h3>
           <div className="others__container">
+            <div className="others-card">
+              <div className="others-card__image-container">
+                <img className="others-card__image" src={place1} alt="place" />
+              </div>
+              <div className="others-card__body">
+                <p>Place</p>
+                <p>text about item</p>
+              </div>
+            </div>
             <div className="others-card">
               <div className="others-card__image-container">
                 <img className="others-card__image" src={place1} alt="place" />
